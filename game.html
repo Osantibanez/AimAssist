@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">                                                      <!-- this is important for showing the % sign in accuracy -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">      <!-- makes it mobile friendly -->
+<title>Aim Trainer</title>                                                  <!-- title that shows in the browser tab -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Aim Trainer</h1>
+
+<!-- MENU -->
+<div id="menu">
+  <p class="menu-hint">Choose a difficulty to start</p>
+  <div class="diff-row">
+    <button class="diff-btn" onclick="pick('easy',this)">Easy</button>
+    <button class="diff-btn" onclick="pick('medium',this)">Medium</button>
+    <button class="diff-btn" onclick="pick('hard',this)">Hard</button>
+  </div>
+  <button id="start-btn" onclick="startGame()">Start</button>
+</div>
+
+<!-- STATS -->
+<div id="stats-bar">
+  Score: <span id="s-score">0</span> &nbsp;|&nbsp;
+  Streak: <span id="s-streak">0</span> &nbsp;|&nbsp;
+  Accuracy: <span id="s-acc">--%</span> &nbsp;|&nbsp;
+  Time: <span id="s-time">30</span>s
+</div>
+
+<!-- STREAK BAR -->
+<div id="streak-row">
+  <span>Streak to 2x:</span>
+  <div id="streak-track"><div id="streak-fill"></div></div>
+</div>
+
+<!-- GAME AREA -->
+<div id="game-area" onclick="onMiss(event)">
+  <div id="target" onclick="onHit(event)"></div>
+</div>
+
+<!-- RESET -->
+<button id="reset-btn" onclick="reset()">Reset</button>
+
+<!-- RESULTS -->
+<div id="results">
+  <h2>Round Over</h2>
+  <div id="grade">B</div>
+  <div id="feedback"></div>
+  <div class="res-grid">
+    <div class="res-box"><div class="val" id="r-score">0</div><div class="lbl">SCORE</div></div>
+    <div class="res-box"><div class="val" id="r-hits">0</div><div class="lbl">HITS</div></div>
+    <div class="res-box"><div class="val" id="r-miss">0</div><div class="lbl">MISSES</div></div>
+    <div class="res-box"><div class="val" id="r-acc">0%</div><div class="lbl">ACCURACY</div></div>
+    <div class="res-box"><div class="val" id="r-streak">0</div><div class="lbl">BEST STREAK</div></div>
+    <div class="res-box"><div class="val" id="r-doubles">0</div><div class="lbl">2X EVENTS</div></div>
+  </div>
+  <div class="res-btns">
+    <button class="pri" onclick="startGame()">Play Again</button>
+    <button onclick="goMenu()">Menu</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
