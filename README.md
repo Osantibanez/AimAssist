@@ -97,9 +97,9 @@ aim-trainer/
 
 ##  Technologies Used
 
-*   **HTML5** — Structure
-*   **CSS3** — Styling, animations, and UI effects
-*   **JavaScript (Vanilla)** — Game logic and rendering
+*   **HTML** — Structure
+*   **CSS** — Styling, animations, and UI effects
+*   **JavaScript** — Game logic and rendering
 
 ***
 
